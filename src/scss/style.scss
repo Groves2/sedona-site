@@ -323,6 +323,7 @@ h2{
 
         .bit-button{
             display: inline-block;
+            color: $white;
             border: 2px solid;
             text-decoration: none;
             padding: .5em;
@@ -331,6 +332,9 @@ h2{
             background: transparent;
             font-weight: normal;
             line-height: 1;
+            @include hover{
+                color: #fff;
+            }
         }
 
         .bit-details{
