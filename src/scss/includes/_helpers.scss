@@ -1,0 +1,70 @@
+@function rems($pixels) {
+  @return #{ $pixels / 16 }rem;
+}
+
+@mixin hover {
+  &:hover, &:active, &:focus, &:target {
+      @content;
+  }
+}
+
+*{
+  box-sizing: border-box;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+}
+
+iframe, embed, object, video {
+  border: 0;
+}
+
+.media-responsive {
+  display: block;
+  height: 0;
+  overflow: hidden;
+  padding: 0 0 56.25%;
+  position: relative;
+  
+  > img {
+    height: auto;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+  }
+
+  iframe,
+  embed,
+  object,
+  video {
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    top: 0;
+    width: 100%;
+  }
+}
+
+.sr {
+  border: 0;
+  height: 1px;
+  left: -99999px;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.container {
+  display: block;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 10px;
+  width: 100%;
+}
