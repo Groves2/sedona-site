@@ -300,6 +300,7 @@ h2{
         background-image: url('../img/tour-bg-m.png');
         background-size: 100% auto;
         background-position: center top;
+        min-height: 0;
     }
     .container{
         max-width: rems(1200);
@@ -375,6 +376,10 @@ h2{
 
 #merch{
     padding: rems(80) 0 rems(100);
+    
+    @media screen and (max-width: 600px){
+        padding-top: 0;
+    }
     .container{
         position: relative;
         display: flex;
@@ -395,6 +400,7 @@ h2{
         margin: rems(30) auto 0;
         text-align: center;
         width: rems(200);
+        max-width: 100%;
         border: 2px solid;
         text-decoration: none;
         padding: rems(8);
@@ -433,6 +439,7 @@ h2{
         width: 100%;
         max-width: rems(980);
         padding: 0 rems(50);
+        margin: 0 auto;
         
         @media screen and (max-width: 600px){
             padding: 0 rems(12);
